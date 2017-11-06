@@ -50,6 +50,20 @@ def setAutoSize(entities, factor, *args, **kwargs):
                                                                          _functions.listKeywordString(kwargs)))
 
 
+def setSize(entities, size, *args, **kwargs):
+    """ Set size for entities
+
+    :param entities: list or single entity
+    :param size: the size
+    :param args: additional parameters for the command: 'option'
+    :param kwargs: additional parameter value pairs: option=value
+    :return: None
+    """
+    _system.cubitCmd('{0[0]} {0[1]} size {1} {2} {3}'.format(_functions.listIdString(entities), factor,
+                                                             _functions.listStr(args),
+                                                             _functions.listKeywordString(kwargs)))
+
+
 def setMeshScheme(entities, meshScheme, *args, **kwargs):
     """ Assign a meshing scheme to a body
 
